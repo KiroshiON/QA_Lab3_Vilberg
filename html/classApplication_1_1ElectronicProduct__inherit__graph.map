@@ -1,0 +1,5 @@
+<map id="ElectronicProduct" name="ElectronicProduct">
+<area shape="rect" id="Node000001" title="Представляет электронный продукт, который является определенным типом продукта с периодом гарантии." alt="" coords="5,81,140,109"/>
+<area shape="rect" id="Node000002" href="$classApplication_1_1Product.html" title="Представляет общий продукт с названием, ценой и количеством." alt="" coords="37,5,108,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="75,49,75,81,70,81,70,49"/>
+</map>
