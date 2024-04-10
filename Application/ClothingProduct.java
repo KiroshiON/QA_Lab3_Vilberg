@@ -1,30 +1,24 @@
 package Application;
 
-/**
-     * @brief Представляет одежду, которая является определенным типом продукта с атрибутом размера.
-     */
-    public class ClothingProduct extends Product {
+public class ClothingProduct extends Product {
 
-        private String size; ///< Размер одежды.
+    private String size;
 
-        /**
-         * @brief Инициализирует новый экземпляр ClothingProduct.
-         * @param name Название одежды.
-         * @param price Цена одежды.
-         * @param quantity Количество одежды в наличии.
-         * @param size Размер одежды.
-         */
-        public ClothingProduct(String name, double price, int quantity, String size) {
-            super(name, price, quantity);
-            this.size = size;
-        }
-
-        /**
-         * @brief Возвращает строковое представление одежды.
-         * @return Строковое представление одежды.
-         */
-        @Override
-        public String toString() {
-            return super.toString() + String.format(" - Размер: %s", this.size);
-        }
+    public ClothingProduct(String name, double price, int quantity, String size) {
+        super(name, price, quantity);
+        this.size = size;
     }
+
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + String.format(" - Size: %s", this.size);
+    }
+}

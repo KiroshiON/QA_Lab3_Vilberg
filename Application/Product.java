@@ -1,40 +1,47 @@
 package Application;
-/**
-     * @brief Представляет общий продукт с названием, ценой и количеством.
-     * \image html image.png width=500cm
-     */
-    public class Product {
 
-        private String name; ///< Название продукта.
-        private double price; ///< Цена продукта.
-        private int quantity; ///< Количество продукта в наличии.
+public class Product {
 
-        /**
-         * @brief Инициализирует новый экземпляр продукта.
-         * @param name Название продукта.
-         * @param price Цена продукта.
-         * @param quantity Количество продукта в наличии.
-         */
-        public Product(String name, double price, int quantity) {
-            this.name = name;
-            this.price = price;
-            this.quantity = quantity;
-        }
+    private String name;
+    private double price;
+    private int quantity;
 
-        /**
-         * @brief Вычисляет общую стоимость инвентаря продукта.
-         * @return Общая стоимость инвентаря продукта.
-         */
-        public double calculateTotal() {
-            return this.price * this.quantity;
-        }
-
-        /**
-         * @brief Возвращает строковое представление продукта.
-         * @return Строковое представление продукта.
-         */
-        @Override
-        public String toString() {
-            return String.format("%s - Цена: $%.2f - Количество: %d - Общая стоимость: $%.2f", this.name, this.price, this.quantity, this.calculateTotal());
-        }
+    public Product(String name, double price, int quantity) {
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
     }
+
+    public double calculateTotal() {
+        return this.price * this.quantity;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s - Price: $%.2f - Quantity: %d - Total: $%.2f", this.name, this.price, this.quantity, this.calculateTotal());
+    }
+}
